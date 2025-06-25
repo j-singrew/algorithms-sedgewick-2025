@@ -16,3 +16,17 @@ public class BinarySearch
         return -1
     }
 }
+
+
+public staticvoid main(string[] args)
+{
+    int[] whiltelist = In.readIns(args[0]);
+    Arrays.sort(whiltelist);
+
+    while (!StdIn.isEmpty())
+    {
+        int key = StdIn.readInt();
+        if (rank(key,whiltelist) == -1)
+            StdOut.print(key)
+    }
+}
