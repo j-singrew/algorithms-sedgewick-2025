@@ -13,6 +13,6 @@ public class BinarySearch
             else if (key > a[mid]) lo = mid + 1;
             else        return mid;
         }
-        return 1
+        return -1
     }
 }
