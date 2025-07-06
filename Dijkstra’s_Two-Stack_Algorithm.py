@@ -34,6 +34,12 @@ def Two_Stack_Alg(expr):
 
 
 
+sum = "( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )"
+result = Two_Stack_Alg(sum)
+print(result)
+
+
+
         
 
 
