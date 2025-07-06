@@ -34,7 +34,7 @@ def Two_Stack_Alg(expr):
 
 
 
-sum = "( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )"
+sum = "( 1 + ( ( 2 + 3 ) * ( 4 * 90 ) ) )"
 result = Two_Stack_Alg(sum)
 print(result)
 
