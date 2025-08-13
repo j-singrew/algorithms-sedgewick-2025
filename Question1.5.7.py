@@ -38,3 +38,30 @@ uf.union(3, 4)
 uf.union(4, 9)
 print(uf.connected(3, 9))  # True
 print(uf)
+
+
+class QuickFindUf:
+    def __init__(self,n):
+        self.id = list(range(n))
+        self.count = n
+
+    def connected(self,p,q):
+        return self.id[p] == self.id[q]
+    
+    def union(self,p,q):
+        pid = self.id[p]
+        qid = self.id[q]
+
+        if pid ==qid:
+            return
+        
+        for i in range(len(self.id)):
+            if self.id[i] == pid:
+                self.id[i] = qid
+        
+        self.count -= 1
+
+    def __str__(self):
+        return f"Components: {self.id}"
+        
+        
