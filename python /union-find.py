@@ -6,15 +6,12 @@ class UnionFind:
         self.size = [1] * n
 
     
-    def counts(self): 
-        return self.count
-    
-    def find(self,p): #accepts argument p
+    def find(self,i): #accepts argument p
 
-        while p != self.parent[p]: #while argument p does not equal its parent 
-            self.parent[p] = self.parent[self.parent[p]] #assing the value in index [p] to self.parent[p]
-            p=self.parent[p]# assign  p to the new value of self 
-        return p
+        while i != self.parent[i]: #while argument p does not equal its parent 
+            self.parent[i] = self.parent[self.parent[i]] #assing the value in index [p] to self.parent[p]
+            i=self.parent[i]# assign  p to the new value of self 
+        return i
     
     def connected(self,p,q): #check if the paths of two number connect 
         return self.find(p)==self.find(q)
@@ -52,4 +49,3 @@ uf.union(6, 1)
 
 print("Are 8 and 9 connected?", uf.connected(8, 9))  # ➜ True
 print("Are 5 and 4 connected?", uf.connected(5, 4))  # ➜ False
-print("Number of components:", uf.count())  # ➜ Should be 2
