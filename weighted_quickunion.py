@@ -21,20 +21,24 @@ class QuickUnionUF:
 
     def __init__(self,n):
         self.id = list(range(n)) #creates 10 number of id's
+        self.parent = n
         self.count = n #number of components
+        self.size = n
 
     
-    def root(self,i):
-        while i != self.id[i]: #while i does not equal its idex position value
-            i = self.id[i] #set i to the value of  index
+    def find(self,i):
+        while i != self.parent[i]: #while i does not equal its idex position value
+            self.parent[i] = self.parent[self.parent[i]]
+            i = self.parent[i]
+             #set i to the value of  index
         return i 
     
     def connected(self,p,q):
-        return self.root(p) == self.root(q) #this will retur true  or false 
+        return self.find(p) == self.find(q) #this will retur true  or false 
     
     def union(self,p,q):
-        i = self.root(p)
-        j = self.root(q)
+        i = self.find(p)
+        j = self.find(q)
         if i == j:
             return #return true 
         self.id[i] = j
