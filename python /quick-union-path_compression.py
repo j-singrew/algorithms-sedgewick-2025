@@ -2,6 +2,10 @@ class weighted_quick_find:
     def __init__(self,n):
         self.parent = list(range(n))
         self.size = [1]*n
+    
+    def connected(self, p, q):
+        return self.find(p) == self.find(q)
+
 
     def find(self,i):
 
