@@ -16,9 +16,25 @@ class RandomConnections:
         self.size = [1] * n
         self.n = n
 
+    def find(self, i):
+        if i != self.parent[i]:
+            self.parent[i] = self.find(self.parent[i])
+        return self.parent[i]
 
+    def connected(self, p, q):
+        return self.find(p) == self.find(q)
 
-
+    def union(self, p, q):
+        rootP = self.find(p)
+        rootQ = self.find(q)
+        if rootP == rootQ:
+            return
+        if self.size[rootP] < self.size[rootQ]:
+            self.parent[rootP] = rootQ
+            self.size[rootQ] += self.size[rootP]
+        else:
+            self.parent[rootQ] = rootP
+            self.size[rootP] += self.size[rootQ]
 
 
 
@@ -32,8 +48,14 @@ class RandomConnections:
 def random_generate(N):
     uf = RandomConnections(N)
     connestions = 0
-    while len({uf.find(i) for in range(N)}) >1:
-        
+    while len({uf.find(i) for i in range(N)}) >1:
+        q = random.randint(0,N-1)
+        p = random.randint(0,N-1)
+
+        if not uf.connected(p,q):
+            uf.union(p,q)
+        connestions+=1
+    return  connestions
 
 
 
