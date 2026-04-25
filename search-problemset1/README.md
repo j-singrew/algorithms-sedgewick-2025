@@ -1,14 +1,13 @@
-2.1.23 Deck sort. Ask a few friends to sort a deck of cards (see Exercise 2.1.13). Ob-
-serve them carefully and write down the method(s) that they use.
-
 2.1.24 Insertion sort with sentinel. Develop an implementation of insertion sort that
 eliminates the j>0 test in the inner loop by first putting the smallest item into position.
 Use SortCompare to evaluate the effectiveness of doing so. Note : It is often possible to
 avoid an index-out-of-bounds test in this way—the element that enables the test to be
 eliminated is known as a sentinel.
+
 2.1.25 Insertion sort without exchanges. Develop an implementation of insertion sort
 that moves larger elements to the right one position with one array access per entry,
 rather than using exch(). Use SortCompare to evaluate the effectiveness of doing so.
+
 2.1.26 Primitive types. Develop a version of insertion sort that sorts arrays of int
 values and compare its performance with the implementation given in the text (which
 sorts Integer values and implicitly uses autoboxing and auto-unboxing to convert).
