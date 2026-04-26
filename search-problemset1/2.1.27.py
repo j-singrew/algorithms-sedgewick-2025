@@ -5,6 +5,8 @@ sort and selection sort on your computer. Use array sizes that are increasing po
 
 """
 
-def shellsort(arr):
+def shellshort(arr):
+
+
 
     
