@@ -94,17 +94,62 @@ def selectionSort(arr):
     
 
 
-def Merge(arr,right,left,mid='none'):
-     n = len(arr)
-     if ((n) % 2) != 0:
-          mid = n % 2
+def MergeSort(arr):
+
+    if len(arr) <= 1:
+         return arr
+    
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+
+    i = 0
+    j = 0
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
+    
+        
+
+    
+
+
+          
+    
+
+
+
+
+
+arr = [1,2,55,11,20,60,10,99,100,20,22]
+l = Merge(arr)
+print(l)
+
+
           
           
-           
+
+
+
           
           
           
      
+
 
      
 
