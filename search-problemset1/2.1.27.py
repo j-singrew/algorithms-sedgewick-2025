@@ -76,9 +76,7 @@ def selectionSort(arr):
     return arr
 
 
-arr = [1,4,455,23,7,89,100,99,30,90]
-l = selectionSort(arr)
-print(l)
+
             
 
 
